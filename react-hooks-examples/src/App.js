@@ -1,24 +1,34 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
+import CounterClass from './components/CounterClass';
+import Counter from './components/Counter';
+import MessageCard from './components/MessageCard';
+import Register from './components/Register';
+
+let App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <nav className="navbar navbr-dark bg-dark navbar-expand-sm">
+        <div className="container">
+          <a href="/" className="navbar-brand mb-0 h1 text-white">Maya Blogs</a>
+          <div className="collapse navbar-collapse justify-content-end">
+            <ul className="navbar-nav">
+              <li className="nav-item px-4">
+                <a href="/" className="nav-link">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      {/* <CounterClass/>
+      <br></br>
+      <Counter/> */}
+      {/* <MessageCard/> */}
+      <Register/>
+    </React.Fragment>
   );
 }
 
