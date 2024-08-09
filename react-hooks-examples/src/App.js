@@ -12,6 +12,8 @@ import HobbySelectorRadio from './components/HobbySelectorRadio';
 import ParentComponent from './components/Basics/ParentComponent';
 import ParentCard from './components/intermediate/ParentCard';
 import ComponentA from './components/PropsDrillingContextApi/ComponentA';
+import DigitalWatch from './components/lifecycle/DigitalWatch';
+import ComponentOne from './components/ContextAPI/ComponentOne';
 
 let App = () => {
 
@@ -38,17 +40,28 @@ let App = () => {
         </div>
       </nav>
 
+      {/* //Event Binding */}
       {/* <CounterClass/>
       <br></br>
       <Counter/> */}
       {/* <MessageCard/> */}
+
+      {/* //Component Interactions */}
       {/* <Register/> */}
       {/* <AuthUser/> */}
       {/* <HobbySelector/> */}
       {/* <HobbySelectorRadio/> */}
       {/* <ParentComponent/> */}
       {/* <ParentCard/> */}
+
+      {/* //Props-drilling example */}
       {/* <ComponentA userInfo={app.userInfo}/> */}
+
+      {/* //useEffect example */}
+      {/* <DigitalWatch/> */}
+
+      {/* //useContext example */}
+      {/* <ComponentOne/> */}
 
     </React.Fragment>
   );
