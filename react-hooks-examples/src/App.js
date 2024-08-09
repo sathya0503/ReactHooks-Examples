@@ -14,6 +14,7 @@ import ParentCard from './components/intermediate/ParentCard';
 import ComponentA from './components/PropsDrillingContextApi/ComponentA';
 import DigitalWatch from './components/lifecycle/DigitalWatch';
 import ComponentOne from './components/ContextAPI/ComponentOne';
+import UserList from './components/http-axio/UserList';
 
 let App = () => {
 
@@ -40,13 +41,13 @@ let App = () => {
         </div>
       </nav>
 
-      {/* //Event Binding */}
+      {/* ==> Event Binding */}
       {/* <CounterClass/>
       <br></br>
       <Counter/> */}
       {/* <MessageCard/> */}
 
-      {/* //Component Interactions */}
+      {/* ==> Conditinal looping and Component Interactions */}
       {/* <Register/> */}
       {/* <AuthUser/> */}
       {/* <HobbySelector/> */}
@@ -54,14 +55,17 @@ let App = () => {
       {/* <ParentComponent/> */}
       {/* <ParentCard/> */}
 
-      {/* //Props-drilling example */}
+      {/* ==> Props-drilling example */}
       {/* <ComponentA userInfo={app.userInfo}/> */}
 
-      {/* //useEffect example */}
+      {/* ==> useEffect example */}
       {/* <DigitalWatch/> */}
 
-      {/* //useContext example */}
+      {/* ==> useContext example */}
       {/* <ComponentOne/> */}
+
+      {/* ==> Http Axios */}
+      {/* <UserList/> */}
 
     </React.Fragment>
   );
