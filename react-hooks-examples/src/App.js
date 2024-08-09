@@ -15,6 +15,7 @@ import ComponentA from './components/PropsDrillingContextApi/ComponentA';
 import DigitalWatch from './components/lifecycle/DigitalWatch';
 import ComponentOne from './components/ContextAPI/ComponentOne';
 import UserList from './components/http-axio/UserList';
+import ContactApp from './components/ContactApp/ContactApp';
 
 let App = () => {
 
@@ -66,6 +67,10 @@ let App = () => {
 
       {/* ==> Http Axios */}
       {/* <UserList/> */}
+
+      {/* ==> Contact Application */}
+      {/* <ContactApp/> */}
+
 
     </React.Fragment>
   );
