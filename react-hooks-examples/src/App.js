@@ -16,6 +16,7 @@ import DigitalWatch from './components/lifecycle/DigitalWatch';
 import ComponentOne from './components/ContextAPI/ComponentOne';
 import UserList from './components/http-axio/UserList';
 import ContactApp from './components/ContactApp/ContactApp';
+import GithubSearchApp from './components/GithubSearchApp/GithubSearchApp';
 
 let App = () => {
 
@@ -68,9 +69,11 @@ let App = () => {
       {/* ==> Http Axios */}
       {/* <UserList/> */}
 
-      {/* ==> Contact Application */}
+      {/* ==> Contact App */}
       {/* <ContactApp/> */}
 
+      {/* ==> Github Search App */}
+      {/* <GithubSearchApp/> */}
 
     </React.Fragment>
   );
