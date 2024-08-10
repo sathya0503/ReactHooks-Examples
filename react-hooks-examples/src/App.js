@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import CounterClass from './components/CounterClass';
 import Counter from './components/Counter';
@@ -17,6 +18,13 @@ import ComponentOne from './components/ContextAPI/ComponentOne';
 import UserList from './components/http-axio/UserList';
 import ContactApp from './components/ContactApp/ContactApp';
 import GithubSearchApp from './components/GithubSearchApp/GithubSearchApp';
+import Navbar from './components/Routing/layout/Navbar';
+import Home from './components/Routing/layout/Home';
+import Employees from './components/Routing/employees/Employees';
+import EmployeeDetails from './components/Routing/employees/EmployeeDetails';
+import Updates from './components/Routing/Stories/Updates';
+import About from './components/Routing/layout/About';
+import Navbars from './components/Routing/layout/Navbar';
 
 let App = () => {
 
@@ -30,7 +38,9 @@ let App = () => {
 
   return (
     <React.Fragment>
-      <nav className="navbar navbr-dark bg-dark navbar-expand-sm">
+
+      {/* Not need to Routing module */}
+      {/* <nav className="navbar navbr-dark bg-dark navbar-expand-sm">
         <div className="container">
           <a href="/" className="navbar-brand mb-0 h1 text-white">Maya Blogs</a>
           <div className="collapse navbar-collapse justify-content-end">
@@ -41,7 +51,7 @@ let App = () => {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* ==> Event Binding */}
       {/* <CounterClass/>
@@ -75,6 +85,8 @@ let App = () => {
       {/* ==> Github Search App */}
       {/* <GithubSearchApp/> */}
 
+      {/* ==> React Router -concept  */}
+      {/* <Navbars /> */}
     </React.Fragment>
   );
 }

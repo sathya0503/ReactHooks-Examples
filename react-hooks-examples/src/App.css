@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+
+.LandingPage{
+  background: white url("./assets/img/image1.jpg") scroll center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.Wrapper{
+  background-color: rgba(14, 13, 13, 0.5);
+  height: 100%;
+}
+.neonText {
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+
+h3 {
+  font-size: 4.2rem;
+  animation: flicker 1.5s infinite alternate;     
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px rgb(217, 134, 19),
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+
+/* Additional styling */
+
+table tbody tr td{
+  font-weight: bold !important;
+  color: black;
+}
+
+.contact-img{
+  margin-top: -70px;
+}
