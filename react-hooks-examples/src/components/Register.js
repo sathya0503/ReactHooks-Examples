@@ -19,8 +19,8 @@ let Register = () => {
 
     return (
         <React.Fragment>
-             <div className="container">
-                <pre>{JSON.stringify(user)}</pre>
+             <div className="container mt-3">
+                {/* <pre>{JSON.stringify(user)}</pre> */}
                 <div className="row">
                     <div className="col-m-6">
                         <div className="card m-4">

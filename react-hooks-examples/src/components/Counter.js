@@ -11,7 +11,7 @@ let Counter = () => {
     
     return (
         <React.Fragment>
-             <div className="container">
+             <div className="container mt-3">
                 <div className="row">
                     <div className="col">
                         <div className="card">

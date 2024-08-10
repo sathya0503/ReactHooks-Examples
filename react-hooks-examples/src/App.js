@@ -86,7 +86,7 @@ let App = () => {
       {/* <GithubSearchApp/> */}
 
       {/* ==> React Router -concept  */}
-      {/* <Navbars /> */}
+      <Navbars />
     </React.Fragment>
   );
 }
