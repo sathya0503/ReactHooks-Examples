@@ -26,6 +26,9 @@ import UserList from "../../http-axio/UserList";
 import DigitalWatch from "../../lifecycle/DigitalWatch";
 import ContactApp from "../../ContactApp/ContactApp";
 import GithubSearchApp from "../../GithubSearchApp/GithubSearchApp";
+import ButtonExample from "../../useRef/ButtomExample";
+import AcceptTerms from "../../useRef/AcceptTerms";
+import MessageCards from "../../use-reducer/MessageCards";
 
 let Navbars = () => {
 
@@ -102,6 +105,15 @@ let Navbars = () => {
                                     <NavDropdown.Item>
                                         <Link to="/httpAxios" style={{textDecoration:'none'}} className="fa-5">Http Axios example</Link>
                                     </NavDropdown.Item>
+                                    <NavDropdown.Item>
+                                        <Link to="/useref" style={{textDecoration:'none'}} className="fa-5">Use Ref</Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item>
+                                        <Link to="/agreeterms" style={{textDecoration:'none'}} className="fa-5">Accept Terms</Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item>
+                                        <Link to="/usereducer" style={{textDecoration:'none'}} className="fa-5">Use Reducer</Link>
+                                    </NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown
                                     id="nav-dropdown-dark-example"
@@ -136,9 +148,13 @@ let Navbars = () => {
                     <Route exact path="/props-drilling" element={<ComponentA userInfo={app.userInfo} />} />
                     <Route exact path="/useContext" element={<ComponentOne />} />
                     <Route exact path="/httpAxios" element={<UserList />} />
+                    <Route exact path="/useref" element={<ButtonExample />} />
+                    <Route exact path="/usereducer" element={<MessageCards />} />
                     <Route exact path="/digitalwatch" element={<DigitalWatch />} />
                     <Route exact path="/contactApp" element={<ContactApp />} />
                     <Route exact path="/githubSearchApp" element={<GithubSearchApp />} />
+                    <Route exact path="/agreeterms" element={<AcceptTerms />} />
+                    
                 </Routes>
             </Router>
         </React.Fragment>
