@@ -29,6 +29,10 @@ import GithubSearchApp from "../../GithubSearchApp/GithubSearchApp";
 import ButtonExample from "../../useRef/ButtomExample";
 import AcceptTerms from "../../useRef/AcceptTerms";
 import MessageCards from "../../use-reducer/MessageCards";
+import PizzaHut from "../../Redux-Example/PizzaHut";
+
+import { Provider } from "react-redux";
+import { Store } from "../../../redux/Store";
 
 let Navbars = () => {
 
@@ -55,10 +59,10 @@ let Navbars = () => {
                                     menuVariant="dark"
                                 >
                                     <NavDropdown.Item className="hide-text-decoration">
-                                        <Link to="/counterclass" style={{textDecoration:'none'}} className="hide-text-decoration font-weight-bold fa-5">Counter with Class</Link>
+                                        <Link to="/counterclass" style={{ textDecoration: 'none' }} className="hide-text-decoration font-weight-bold fa-5">Counter with Class</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/counter" style={{textDecoration:'none'}} className="hide-text-decoration font-weight-bold fa-5">Counter with function</Link>
+                                        <Link to="/counter" style={{ textDecoration: 'none' }} className="hide-text-decoration font-weight-bold fa-5">Counter with function</Link>
                                     </NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown
@@ -67,16 +71,16 @@ let Navbars = () => {
                                     menuVariant="dark"
                                 >
                                     <NavDropdown.Item>
-                                        <Link to="/register" style={{textDecoration:'none'}} className="fa-5">Register</Link>
+                                        <Link to="/register" style={{ textDecoration: 'none' }} className="fa-5">Register</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/authuser" style={{textDecoration:'none'}} className="fa-5">Auth User</Link>
+                                        <Link to="/authuser" style={{ textDecoration: 'none' }} className="fa-5">Auth User</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/hobbySelector" style={{textDecoration:'none'}} className="fa-5">Hobby Selector</Link>
+                                        <Link to="/hobbySelector" style={{ textDecoration: 'none' }} className="fa-5">Hobby Selector</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/hobbySelectorRadio" style={{textDecoration:'none'}} className="fa-5">HobbySelector Radio Buttons</Link>
+                                        <Link to="/hobbySelectorRadio" style={{ textDecoration: 'none' }} className="fa-5">HobbySelector Radio Buttons</Link>
                                     </NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown
@@ -85,10 +89,10 @@ let Navbars = () => {
                                     menuVariant="dark"
                                 >
                                     <NavDropdown.Item>
-                                        <Link to="/parentComponent" style={{textDecoration:'none'}} className="fa-5">Parent Component</Link>
+                                        <Link to="/parentComponent" style={{ textDecoration: 'none' }} className="fa-5">Parent Component</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/parentCard" style={{textDecoration:'none'}} className="fa-5">parent Card</Link>
+                                        <Link to="/parentCard" style={{ textDecoration: 'none' }} className="fa-5">parent Card</Link>
                                     </NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown
@@ -97,22 +101,31 @@ let Navbars = () => {
                                     menuVariant="dark"
                                 >
                                     <NavDropdown.Item>
-                                        <Link to="/props-drilling" style={{textDecoration:'none'}} className="fa-5">Props Drilling</Link>
+                                        <Link to="/props-drilling" style={{ textDecoration: 'none' }} className="fa-5">Props Drilling</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/useContext" style={{textDecoration:'none'}} className="fa-5">useContext example</Link>
+                                        <Link to="/useContext" style={{ textDecoration: 'none' }} className="fa-5">useContext example</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/httpAxios" style={{textDecoration:'none'}} className="fa-5">Http Axios example</Link>
+                                        <Link to="/httpAxios" style={{ textDecoration: 'none' }} className="fa-5">Http Axios example</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/useref" style={{textDecoration:'none'}} className="fa-5">Use Ref</Link>
+                                        <Link to="/useref" style={{ textDecoration: 'none' }} className="fa-5">Use Ref</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/agreeterms" style={{textDecoration:'none'}} className="fa-5">Accept Terms</Link>
+                                        <Link to="/agreeterms" style={{ textDecoration: 'none' }} className="fa-5">Accept Terms</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/usereducer" style={{textDecoration:'none'}} className="fa-5">Use Reducer</Link>
+                                        <Link to="/usereducer" style={{ textDecoration: 'none' }} className="fa-5">Use Reducer</Link>
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                                <NavDropdown
+                                    id="nav-dropdown-dark-example"
+                                    title="Redux"
+                                    menuVariant="dark"
+                                >
+                                    <NavDropdown.Item>
+                                        <Link to="/pizzahut" style={{ textDecoration: 'none' }} className="fa-5">Pizza Hut Example</Link>
                                     </NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown
@@ -121,13 +134,13 @@ let Navbars = () => {
                                     menuVariant="dark"
                                 >
                                     <NavDropdown.Item>
-                                        <Link to="/digitalwatch" style={{textDecoration:'none'}} className="fa-5">Digital Watch</Link>
+                                        <Link to="/digitalwatch" style={{ textDecoration: 'none' }} className="fa-5">Digital Watch</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/contactApp" style={{textDecoration:'none'}} className="fa-5">Contact App</Link>
+                                        <Link to="/contactApp" style={{ textDecoration: 'none' }} className="fa-5">Contact App</Link>
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <Link to="/githubSearchApp" style={{textDecoration:'none'}} className="fa-5">Github Search App</Link>
+                                        <Link to="/githubSearchApp" style={{ textDecoration: 'none' }} className="fa-5">Github Search App</Link>
                                     </NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
@@ -150,11 +163,18 @@ let Navbars = () => {
                     <Route exact path="/httpAxios" element={<UserList />} />
                     <Route exact path="/useref" element={<ButtonExample />} />
                     <Route exact path="/usereducer" element={<MessageCards />} />
+                    <Route exact path="/pizzahut" element={<React.Fragment>
+                        <Provider store={Store}>
+                            <PizzaHut />
+                        </Provider>
+                    </React.Fragment>
+                    } />
+
                     <Route exact path="/digitalwatch" element={<DigitalWatch />} />
                     <Route exact path="/contactApp" element={<ContactApp />} />
                     <Route exact path="/githubSearchApp" element={<GithubSearchApp />} />
                     <Route exact path="/agreeterms" element={<AcceptTerms />} />
-                    
+
                 </Routes>
             </Router>
         </React.Fragment>
