@@ -25,6 +25,7 @@ let GithubSearchApp = () => {
         let dataURL = `https://api.github.com/users/${githubUser}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
         Axios.get(dataURL).then((response) => {
             setGithubProfile(response.data);
+            setErrorMessage({});
         }).catch((error) => {
             setErrorMessage(error);
         });
@@ -34,6 +35,7 @@ let GithubSearchApp = () => {
         let dataURL = `https://api.github.com/users/${githubUser}/repos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
         Axios.get(dataURL).then((response) => {
             setGithubRepos(response.data);
+            setErrorMessage({});
         }).catch((error) => {
             setErrorMessage(error);
             setErrorStatus(error.response.data.status)
