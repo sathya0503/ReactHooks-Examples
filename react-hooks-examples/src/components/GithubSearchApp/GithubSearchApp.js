@@ -3,15 +3,18 @@ import { CLIENT_ID, CLIENT_SECRET } from "./GithubCredentails";
 import Axios from "axios";
 import GithubProfile from "./GithubProfile";
 import GithubRepos from "./GithubRepos";
+import ErrorCard from "../Commons/ErrorCard";
 let GithubSearchApp = () => {
 
     let [githubUser, setGithubuser] = useState('');
-    
+
     let [githubProfile, setGithubProfile] = useState({});
 
     let [githubRepos, setGithubRepos] = useState([]);
 
-    let [errorMessage, setErrorMessage] = useState('');
+    let [errorMessage, setErrorMessage] = useState({});
+
+    let [errorStatus, setErrorStatus] = useState('');
     let submitSearch = (event) => {
         event.preventDefault();
         searchGithubProfile(githubUser);
@@ -33,10 +36,11 @@ let GithubSearchApp = () => {
             setGithubRepos(response.data);
         }).catch((error) => {
             setErrorMessage(error);
+            setErrorStatus(error.response.data.status)
         });
     };
 
-    return(
+    return (
         <React.Fragment>
             {/* <pre>{JSON.stringify(githubUser)}</pre> */}
             <div className="container mt-3">
@@ -50,24 +54,29 @@ let GithubSearchApp = () => {
                     <div className="col">
                         <form className="form-inline" onSubmit={submitSearch}>
                             <div className="form-group">
-                              <input 
-                              value={githubUser}
-                              onChange={e => setGithubuser(e.target.value)}
-                              type="text" className="form-control" placeholder="Github Username"/>  
+                                <input
+                                    value={githubUser}
+                                    onChange={e => setGithubuser(e.target.value)}
+                                    type="text" className="form-control" placeholder="Github Username" />
                             </div>
-                            <input type="submit" className="btn btn-secondary btn-sm" value="Search"/>
+                            <input type="submit" className="btn btn-secondary btn-sm" value="Search" />
                         </form>
                     </div>
                 </div>
+                {
+                    errorMessage.hasOwnProperty('message') ? <React.Fragment>
+                        <ErrorCard errorStatus={errorStatus}/>
+                    </React.Fragment> : null
+                }
                 {/* Github Profile */}
                 <div className="row">
                     <div className="col">
                         {/* <pre>{JSON.stringify(githubProfile)}</pre> */}
                         {
                             Object.keys(githubProfile).length > 0 ?
-                            <React.Fragment>
-                                <GithubProfile githubProfile={githubProfile}/>
-                            </React.Fragment> : null
+                                <React.Fragment>
+                                    <GithubProfile githubProfile={githubProfile} />
+                                </React.Fragment> : null
                         }
                     </div>
                 </div>
@@ -77,9 +86,9 @@ let GithubSearchApp = () => {
                         {/* <pre>{JSON.stringify(githubRepos)}</pre> */}
                         {
                             Object.keys(githubRepos).length > 0 ?
-                            <React.Fragment>
-                                <GithubRepos githubRepos={githubRepos}/>
-                            </React.Fragment> : null
+                                <React.Fragment>
+                                    <GithubRepos githubRepos={githubRepos} />
+                                </React.Fragment> : null
                         }
                     </div>
                 </div>
