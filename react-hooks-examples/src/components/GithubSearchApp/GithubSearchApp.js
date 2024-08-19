@@ -28,6 +28,7 @@ let GithubSearchApp = () => {
             setErrorMessage({});
         }).catch((error) => {
             setErrorMessage(error);
+            setGithubProfile({});
         });
     };
 
@@ -39,6 +40,7 @@ let GithubSearchApp = () => {
         }).catch((error) => {
             setErrorMessage(error);
             setErrorStatus(error.response.data.status)
+            setGithubRepos([]);
         });
     };
 
