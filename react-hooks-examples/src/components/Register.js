@@ -28,7 +28,7 @@ let Register = () => {
                                 <p className="h4">Registration</p>
                             </div>
                             <div className="card-body bg-light">
-                                <form>
+                                <form className="form">
                                     <div className="form-group">
                                         <input name="username" onChange={updateInput} value={user.username} type="text" className="form-control" placeholder="Username"/>
                                     </div>
